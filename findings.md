@@ -39,6 +39,7 @@ output: list of tuples of size two corresponding to the desired schedule and an 
     client_tasks = [(2, 50), (1, 45), (2, 40), (1, 60)]
     revenue, schedule = freelance_tasks(client_tasks)
 ```
+```
 
 ## Algorithmic Strategy
 
