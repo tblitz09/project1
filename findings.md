@@ -91,6 +91,7 @@ The final case we thought to check was if the deadlines were farther away and ev
 ## Benchmarking Test
 We compare the performance of the two algorithms on randomly generated lists of different amounts of tuples (size 6 tasks to 20 tasks) with randomized deadlines between 1-10 and payment 10-100. We present the results in the left graph which shows the time on a linear scale while the right graph in a log scale. 
 ![Benchmark graph](results.png) | ![Benchmark graph log scale](resultslog.png)
+|---|---|
 
 ## The Findings
 In comparing our original baseline solution to the new, more efficient solution in an empirical benchmarking test, we can see that the new solution is way faster overall. One way to immediately tell this is that the new algorithm runs in O(nlogn) and our original baseline runs in O(2^n) as upper bounds of growth. When the graph (results.png) was produced, there seemed to be random bumps in both lines at different points every time it was run, but because they were in different positions and of different magnitude, the concensus is that the lines were affected by background computer processes. Overall, our new algorithm proves to be much more efficient no matter the amount of inputs as the baseline only scales more and more being an exponential growth rate.
