@@ -8,7 +8,7 @@ The objective of this Freelance Task problem is to create a schedule using a giv
 
 The baseline we created tried every possible group of tasks, then sorts by deadlines and includes the ones that fit the deadline. For every group that works, it adds up the pay and saves it if it beats the best total so far, then tries again with a new subset. It’s a “dumb” way because the number of groups grows exponentially, so it gets extremely slow as tasks add up, but it works because checking every possible group means it will guarantee that the best one is in there. 
 
-'''text
+```text
 Algorithm freelanceTasksBaseline(tasks)
 input: list of tuples of size two with the two elements being ‘deadline’ and ‘pay’
 output: list of tuples of size two corresponding to the desired schedule and an int corresponding to maximum revenue
@@ -38,7 +38,6 @@ output: list of tuples of size two corresponding to the desired schedule and an 
     return max_revenue, best_schedule
     client_tasks = [(2, 50), (1, 45), (2, 40), (1, 60)]
     revenue, schedule = freelance_tasks(client_tasks)
-```
 ```
 
 ## Algorithmic Strategy
