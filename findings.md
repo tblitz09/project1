@@ -93,7 +93,8 @@ We compare the performance of the two algorithms on randomly generated lists of 
 |---|---|
 
 
-
-## Reflection
-
+## Benchmark Reflection
 In comparing our baseline solution to the optimized greedy soltion in an empirical benchmarking test, we can see that the optimized solution is much faster overall and does not grow at the same rate as the baseline. We can see this more clearly in the log scale graph where the baseline algorithm seems to be growing at a linear rate. If it is growing at a linear rate at a log scale, then the graph is growing at a exponential rate in linear as shown in the linear graph. However, in both graphs it is shown that the greedy algorithm is growing too slowly to show its true form of n^2. Before, we did not use multiple tests and average out the times, so we had random dips in our graphs. Now we test it 10 times per list size, so we can better show the true nature of the running time of each algorithm. Overall, the greedy algorithm proves to be more effcient as the amount in the list of tasks increases due to the baseline having a greater growth rate than the greedy. 
+
+## Project Reflection
+This project allowed our team to develop baseline and greedy algorithms, evaluate the asymptotic running times of each algorithm, create test suites to confirm the efficiency of our algorithm, and create graphs that compare the running times of the two algorithms. These concepts are incredibly useful to help us as programmers to approach different projects with the most efficient way possible. If this project were true and real, it would be incredibly helpful to have an algorithm that can efficiently sort through hundreds of available tasks. Although we only tested 20 different tasks, we can ensure that, based off the growth of our greedy algorithm, it will be able to handle an increased amount of tasks better than the baseline approach. Our algorithm could be further improved for real life use by implementing user input to confirm the amount of days that the freelancer may have available. We could also implement the ability to read csv files of a large group of tasks, so that the algorithm can sort through and select the most profitable schedule from the file. These improvements could result in our project becoming a great real life resource. 
