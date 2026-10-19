@@ -10,8 +10,8 @@ The baseline we created tried every possible group of tasks, then sorts by deadl
 
 ```text
 Algorithm freelanceTasksBaseline(tasks)
-input: list of tuples of size two with the two elements being ‘deadline’ and ‘pay’
-output: list of tuples of size two corresponding to the desired schedule and an int corresponding to maximum revenue
+    input: list of tuples of size two with the two elements being ‘deadline’ and ‘pay’
+    output: list of tuples of size two corresponding to the desired schedule and an int corresponding to maximum revenue
     max_revenue = 0
     best_schedule = []
 
@@ -92,7 +92,6 @@ We compare the performance of the two algorithms on randomly generated lists of 
 ![Benchmark graph](results.png) | ![Benchmark graph log scale](resultslog.png)
 |---|---|
 
-## The Findings
-In comparing our original baseline solution to the new, more efficient solution in an empirical benchmarking test, we can see that the new solution is way faster overall. One way to immediately tell this is that the new algorithm runs in O(nlogn) and our original baseline runs in O(2^n) as upper bounds of growth. When the graph (results.png) was produced, there seemed to be random bumps in both lines at different points every time it was run, but because they were in different positions and of different magnitude, the concensus is that the lines were affected by background computer processes. Overall, our new algorithm proves to be much more efficient no matter the amount of inputs as the baseline only scales more and more being an exponential growth rate.
+## Reflection
 
-In comparing our baseline solution to the optimized greedy soltion in an empirical benchmarking test, we can see that the optimized solution is much faster overall and does not grow at the same rate as the baseline. 
+In comparing our baseline solution to the optimized greedy soltion in an empirical benchmarking test, we can see that the optimized solution is much faster overall and does not grow at the same rate as the baseline. We can see this more clearly in the log scale graph where the baseline algorithm seems to be growing at a linear rate. If it is growing at a linear rate at a log scale, then the graph is growing at a exponential rate in linear as shown in the linear graph. However, in both graphs it is shown that the greedy algorithm is growing too slowly to show its true form of n^2. Before, we did not use multiple tests and average out the times, so we had random dips in our graphs. Now we test it 10 times per list size, so we can better show the true nature of the running time of each algorithm. Overall, the greedy algorithm proves to be more effcient as the amount in the list of tasks increases due to the baseline having a greater growth rate than the greedy. 
