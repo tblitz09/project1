@@ -2,7 +2,7 @@
 
 ## Problem Formulation
 
-The objective of this Freelance Task problem is to create a schedule using a given list of tuples that maximizes revenue. We are provided a list of tuples of size two denoted as Tasks = =[(Deadline1 , Pay1), (Deadline 2, Pay 2), …, (Deadline n, Pay n)]. The constraints of this problem is that only one task can be worked on at one time, and that task takes 1 day to complete. Each item in the list is designated as a tuple that has two elements: deadline corresponding to the day which the task must be completed by or it will be unable, and pay corresponding to the revenue that will be gained by completing the task. Our goal is to design an algorithm that both returns a schedule that has been specifically chosen because it produces the maximum amount of revenue with the deadlines, and returns the maximum revenue of that schedule when it is completed. 
+The objective of this Freelance Task problem is to create a schedule using a given list of tuples that maximizes revenue. We are provided a list of tuples of size two denoted as Tasks = [(Deadline1 , Pay1), (Deadline 2, Pay 2), …, (Deadline n, Pay n)]. The constraints of this problem is that only one task can be worked on at one time, and that task takes 1 day to complete. Each item in the list is designated as a tuple that has two elements: deadline corresponding to the day which the task must be completed by or it will be unable, and pay corresponding to the revenue that will be gained by completing the task. Our goal is to design an algorithm that both returns a schedule that has been specifically chosen because it produces the maximum amount of revenue with the deadlines, and returns the maximum revenue of that schedule when it is completed. 
 
 ## Baseline Solution
 
@@ -66,9 +66,8 @@ Algorithm freelanceTasksGreedy(tasks):
 
 ## Complexity Analysis
 
-In our baseline solution, the outer loop generates 2^n - 1 combinations using the function - combinations(tasks, i). For each generated subset of size i, the dominant operations are the sorting step (current_schedule.sort()), which takes O(ilogi) time according to our variable i, and the validation loop, which takes O(i) time. Because the largest subsets approach size n and the total number of subsets is exponential, which means they use O(2^n), the upper bound is strictly limited by the largest combinations multiplied by their sorting which means the Big O bound is O(2^n). 
-
-Our baseline solution operates at a worst-case time complexity of $\mathcal{O}(2^n)$. This is due to the 
+**Baseline solution** operates at a worst-case time complexity of $\mathcal{O}(2^n * nlogn)$. This is due to the subset for combinations part simplifying to an tight bound asympotic running time of 2^n and the sort algorithm in the inner loop simplifying to a tight bound time of nlogn. This results in the worst case, the total work has a tight bound asympotic running time of $\mathcal{O}(2^n * nlogn)$ 
+**Greedy algorithm** can be simplified to a outer loop that runs n times and inner loop n that runs n times that contains inner code of linear time. This results, in the worst case, a tight bound asympotic running time of $\mathcal{O}(n^2)$
 
 # Empirical Evaluation
 
@@ -91,6 +90,8 @@ The final case we thought to check was if the deadlines were farther away and ev
 We compare the performance of the two algorithms on randomly generated lists of different amounts of tuples (size 6 tasks to 20 tasks) with randomized deadlines between 1-10 and payment 10-100. We present the results in the left graph which shows the time on a linear scale while the right graph in a log scale. 
 ![Benchmark graph](results.png) | ![Benchmark graph log scale](resultslog.png)
 |---|---|
+
+
 
 ## Reflection
 
