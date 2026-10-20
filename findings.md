@@ -68,7 +68,7 @@ Algorithm freelanceTasksGreedy(tasks):
 
 **Baseline solution** operates at a worst-case time complexity of $\mathcal{O}(2^n * nlogn)$. This is due to the subset for combinations part simplifying to an tight bound asympotic running time of 2^n and the sort function in the inner loop simplifying to a tight bound running time of nlogn. This results in the worst case, the total work has a tight bound asympotic running time of $\mathcal{O}(2^n * nlogn)$.   
 
-**Greedy algorithm** can be simplified to a outer loop that runs n times and inner loop n that runs n times that contains inner code of linear time. This results, in the worst case, a tight bound asympotic running time of $\mathcal{O}(n^2)$
+**Greedy algorithm** can be simplified to a outer loop that runs n times and inner loop n that runs n times that contains inner code of linear time. And the sort algorithm simplifies to a nlogn. This results, in the worst case, a tight bound asympotic running time of $\mathcal{O}(nlogn + n^2)$ which simplifies to $\mathcal{O}(n^2)$.
 
 # Empirical Evaluation
 
